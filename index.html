@@ -7,11 +7,68 @@
 
     <script>
 
+        // Gets user's choice //
+        let userChoice = prompt("Make your selection: ");
         
+        // Generates random computer choice //
+        let computerChoice = Math.random();
+
+            if (computerChoice < 0.34) {
+                computerChoice = "Rock";}
+            else if (computerChoice <= 0.67) {
+                computerChoice = "Paper"}
+            else {
+                computerChoice = "Scissors"
+            }
+
+        // Logs the two choices //
+        console.log(userChoice)
+        console.log(computerChoice);
+
+        // Works out winner of round //
+        let roundResult = function(playerChoice, computerChoice) {
+            // Draw //
+            if (playerChoice===computerChoice) {
+                return "Draw";
+            }
+
+            // If player picks rock //
+            if (playerChoice == "rock") {
+                if (computerChoice == "Paper") {
+                    return "Computer wins"; }
+                else {
+                    return "Player wins";
+                }
+            }
+
+            // If player picks paper //
+            if (playerChoice == "paper"){
+                if (computerChoice == "Scissors") {
+                    return "Computer wins"; }
+                else {
+                    return "Player wins";
+                }
+            }
+
+            // If player picks scissors //
+            if (playerChoice == "scissors"){
+                if (computerChoice == "Rock") {
+                    return "Computer wins"; }
+                else {
+                    return "Player wins";
+                }
+            }
+        }
+
+        console.log(roundResult(userChoice, computerChoice));
+    
+
+
+
     </script>
 
     <body>
-        <p>Page is empty - open Console to play.</p>
+        <p>Page is empty - open computer to play.</p>
     </body>
 
 
