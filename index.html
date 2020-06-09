@@ -78,12 +78,15 @@
         let computerSelection = computerPlay();
             console.log("Round " + rounds + ": " + oneRound(playerChoice, computerChoice));
        }
-       if (pScore > cScore || pScore >= 3) {
+       if (pScore > cScore) {
            return "Final score: " + pScore + " vs " + cScore+"\n" + 
            "Congratulations, you beat the computer!";
        }
-       else {
+       else if (cScore > pScore) {
            return "Final score: " + pScore + " vs " + cScore+"\n" + "Bad luck, the computer beat you";
+       }
+       else {
+           return "Meh, draw";
        }
        }
         
@@ -92,7 +95,7 @@
     </script>
 
     <body>
-        <p>Page is empty - open computer to play.</p>
+        <p>To play the game, open the console (F12), type <strong>pg()</strong> and press enter.</p>
     </body>
 
 
