@@ -102,3 +102,11 @@ const keepScore = () => {
     document.getElementById('playerScore').textContent = pScore;
     document.getElementById('computerScore').textContent = cScore;
 };
+
+// reset
+const reset = () => {
+    document.location.reload();
+    clearInterval(interval);
+}
+
+rstBtn.addEventListener('click', reset);
