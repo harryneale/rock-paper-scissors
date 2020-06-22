@@ -1,102 +1,53 @@
 <!DOCTYPE html>
 
 <html>
+
     <head>
-        <title>Rock-Paper-Scissors</title>
+        <title>Harry RPS 2</title> 
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="/styles2.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet"> 
     </head>
 
-    <script>
-
-        let pScore = 0;
-        let cScore = 0;
-        let rounds = 1;
-
-        
-        // Generates random computer choice //
-        function computerPlay() {
-            computerChoice = Math.random();
-            if (computerChoice < 0.34) {
-                computerChoice = "rock";}
-            else if (computerChoice <= 0.67) {
-                computerChoice = "paper"}
-            else {
-                computerChoice = "scissors"
-            }
-        }
-
-        // Works out winner of round //
-        let oneRound = function(playerChoice, computerChoice) {
-            // Draw //
-            if (playerChoice===computerChoice) {
-                rounds++
-                return "Draw";
-            }
-
-            // If player picks rock //
-            if (playerChoice == "rock") {
-                if (computerChoice == "paper") {
-                    rounds++
-                    cScore++
-                    return "Computer wins"; }
-                else {
-                    rounds++
-                    pScore++
-                    return "Player wins";
-                }
-            }
-
-            // If player picks paper //
-            if (playerChoice == "paper"){
-                if (computerChoice == "scissors") {
-                    rounds++
-                    cScore++
-                    return "Computer wins"; }
-                else {
-                    rounds++
-                    pScore++
-                    return "Player wins";
-                }
-            }
-
-            // If player picks scissors //
-            if (playerChoice == "scissors"){
-                if (computerChoice == "rock") {
-                    rounds++
-                    cScore++
-                    return "Computer wins"; }
-                else {
-                    rounds++
-                    pScore++
-                    return "Player wins";
-                }
-            }
-        }
-        
-       function pg() {
-        for (let i=0; i<5; i++) {
-        let playerChoice = prompt("Make your selection: ");
-        let computerSelection = computerPlay();
-            console.log("Round " + rounds + ": " + oneRound(playerChoice, computerChoice));
-       }
-       if (pScore > cScore) {
-           return "Final score: " + pScore + " vs " + cScore+"\n" + 
-           "Congratulations, you beat the computer!";
-       }
-       else if (cScore > pScore) {
-           return "Final score: " + pScore + " vs " + cScore+"\n" + "Bad luck, the computer beat you";
-       }
-       else {
-           return "Meh, draw";
-       }
-       }
-        
-
-
-    </script>
-
     <body>
-        <p>To play the game, open the console (F12), type <strong>pg()</strong> and press enter.</p>
-    </body>
 
+        <section>
+
+            <div class="header">
+                <h1>Rock, Paper, Scissors</h1>
+            </div>
+
+            <div id ="analysis" class="analysis"> 
+            </div>
+
+            <div class="scores">
+                <div id="ps">
+                    <h2 id="playerScore">0</h2>
+                    <h4>Player score</h4>
+                </div>
+                <div id="cs">
+                    <h2 id="computerScore">0</h2>
+                    <h4>Computer score</h4>
+                </div>
+            </div>
+
+            <div class="options">
+                <button id="rock">Rock<br>(r)</button>
+                <button id="paper">Paper<br>(p)</button>
+                <button id="scissors">Scissors<br>(s)</button>
+            </div>
+
+            <hr>
+
+            <div class="reset">
+                <button id="rstBtn">Reset</button>
+            </div>
+
+            <script src="../app2.js"></script>
+            
+        </section>
+
+    </body>
 
 </html>
