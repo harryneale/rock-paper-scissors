@@ -1,0 +1,127 @@
+* { 
+    background-color: rgb(173, 216, 230);
+    color: black;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.header {
+    width: 100vw;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0px;
+    font-family: 'Special Elite', cursive;
+    font-size: 35px;
+    padding-bottom: 0px;
+}
+
+.header h1 {
+    background-color: black;
+    color: white;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Cabin Sketch', cursive;
+}
+
+.options button {
+    width: 17.5%;
+    height: 75px;
+    background-color: white;
+    border: 0px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    transition: all .3s ease-in-out;
+    font-size: 20px;
+    box-shadow: 5px;
+    font-family: 'Finger Paint', cursive;
+}
+
+.options button:hover {
+    transform: scale(1.5);
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+.scores {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.scores h2 {
+    font-size: 125px;
+    font-family: 'Cabin Sketch', cursive;
+    margin-bottom: 5px;
+}
+
+.scores h4 {
+    font-size: 30px;
+    font-family: 'Special Elite', cursive;
+}
+
+.analysis {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.winner {
+    font-size: 100px;
+}
+
+hr {
+    border: 0.1px solid white;
+    border-radius: 5px;
+    margin-bottom: 0;
+}
+
+.reset {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Cabin Sketch', cursive;
+    width: 100vw;
+    background-color: black;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    height:125px;
+}
+
+.reset button {
+    width: 10%;
+    height: 20px;
+    background-color: white;
+    border: 0px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+    font-size: 15px;
+    box-shadow: 5px;
+    font-family: 'Finger Paint', cursive;
+    margin-top: 4vh;
+}
+
+.reset button:hover {
+    transform: scale(1.1);
+    background-color: black;
+    color: white;
+}
+
+.playerChoice {
+    font-family: 'Special Elite', cursive;
+}
