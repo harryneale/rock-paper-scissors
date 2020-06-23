@@ -30,15 +30,10 @@ scissors.onclick = () => {
 
 // Generates random computer choice
     function computerPlay() {
-        computerChoice = Math.floor(Math.random() * 3);
-        if (computerChoice < 0.33) {
-            computerChoice = "rock";}
-        else if (computerChoice <= 0.66) {
-            computerChoice = "paper"}
-        else {
-            computerChoice = "scissors"
-            }
-        }
+        const computerOptions = ['rock', 'paper', 'scissors'];
+        const computerNumber = Math.floor(Math.random() * 3);
+        computerChoice = computerOptions[computerNumber];
+        };
 
 // Works out winner of round //
     let oneRound = function(playerChoice, computerChoice) {
